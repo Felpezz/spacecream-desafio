@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  padding-top: 32px;
+  
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin-top: 3.2rem;
+  margin: auto;
+
+  background: var(--bg-color);
+}
+
+:root {
+  --bg-h1-color: hsl(275, 18%, 79%);
+  --bg-header-color: hsl(218, 17%, 62%);
+  --bg-color: hsl(233, 100%, 97%);
+  --fs-btn-color: hsla(232, 17%, 35%);
+  --btn-color: hsla(312, 91%, 96%);
+
+  --fc-header-color: #ffffff;
+  
+  --ff-header: 'Staatliches', cursive;
+  --ff-paragraph: 'Palanquin', sans-serif;
+
+  font-size: 62.5%;
+  --fs-header: 4rem;
+  --fs-paragraph: 1.4rem;
+  --fs-btn: 2.0rem
+}
+
+.page {
+  max-width: 384px;
+  margin: 0 auto;
+}
+
+header {
+  min-height: 277px;
+}
+
+header img:hover {
+  transform: scale(1.2);
+  transition: 500ms;
+}
+
+body::before {
+  content: '';
+  display: block;
+  top: 0;
+  width: 100%;
+  height: 309px;
+  position: absolute;
+  z-index: -1;
+
+  background: var(--bg-header-color);
+}
+
+h1 {
+  background: 100%;
+  background-color: var(--bg-h1-color);
+
+  font-family: var(--ff-header);
+  font-size: var(--fs-header);
+  font-weight: 400;
+
+  color: var(--fc-header-color);
+  line-height: 3.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+  padding: 8px 0;
+  margin-top: 3.2rem;
+
+  animation: rightleft 700ms forwards;
+}
+
+main {
+  padding: 0 3.5rem;
+  margin-top: 1.4rem;
+}
+
+.img-section {
+  position: relative;
+
+  margin-top: 3.6rem;
+
+  animation: leftright 1.5s forwards;
+}
+
+.img-section img:hover {
+  transform: scale(1.1);
+  transition: 350ms;
+}
+
+.img-section p {
+  font-family: var(--ff-paragraph);
+  font-size: var(--fs-paragraph);
+  font-weight: 400;
+  line-height: 1.4em;
+}
+
+.img-section h2 {
+  position: absolute;
+  top: 16px ;
+  right: 16px;
+
+  font-family: var(--ff-header);
+  font-size: var(--fs-btn);
+  font-weight: 400;
+  line-height: 3.4rem;
+
+  color: var(--fs-btn-color);
+  background: var(--btn-color);
+
+  border-radius: 2.0rem;
+  letter-spacing: 0.05em;
+  padding: 0 2.3rem;
+
+  animation: leftright 700ms;
+}
+
+@keyframes leftright {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes rightleft {
+  0% {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
